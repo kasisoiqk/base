@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #1eaa82;
+    --primary-color-dark: #3bb894;
+    --secondary-color: #212121;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --text-color-light: #666;
+    --text-color-dark: #a9a9a9;
+    --border-color: #bdbdbd;
+    --border-color-light: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: .1s;
+}
+
+*::selection {
+    color: var(--white-color);
+    background: var(--primary-color);
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6rem;
+    font-size: 62.5%;
+    color: var(--text-color);
+}
+
+/* Class */
+
+
+/* Animation */
+@keyframes TopFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes languageChoose {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes menuGrow {
+    from {
+        line-height: 0;
+        color: transparent;
+    }
+    to {
+        line-height: 3rem;
+        color: var(--text-color);
+    }
+}
+
+@keyframes modalGrow {
+    from {
+        transform: scale(.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes GrowY {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes GrowX {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}

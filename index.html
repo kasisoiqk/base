@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Website</title>
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Poppins:display=swap|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main-home.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="app__header">
+            <div class="header__info">
+                <div class="header-info__left">
+                    <div class="header-info-left__item">
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto: example@gmail.com">example@gmail.com</a>
+                    </div>
+                    <div class="header-info-left__item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel: 1 562 867 5309">0123 456 789</a>
+                    </div>
+                    <div class="header-info-left__item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://goo.gl/maps/A4KjKiauJGWfB8mT8">Thanh Xuan, Ha Noi, Viet Nam</a>
+                    </div>
+                </div>
+                <div class="header-info__right">
+                    <div class="header-info-right__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="header-info-right__language">
+                        <div class="header-info-right-language__input">
+                            <p>English</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <ul class="header-info-right-language__choose">
+                            <li onclick="changeLanguage('vi')" class="header-info-right-language-choose__item">
+                                <a>Vietnamese</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <label for="modal-login-register" class="header-info-right__modal-login">
+                        <i class="fa-solid fa-language"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="header__banner hide-on-lower-tablet">
+                <div class="grid wide">
+                    <!--  header__banner--onscroll -->
+                    <div class="header__banner-wrapper">
+                        <div class="header-banner__logo">
+                            <a href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="header-banner__logo header-banner__logo--onscroll">
+                            <a href="#"><img src="./assets/images/logo-mobile-img.png" alt="logo"></a>
+                        </div>
+                        <ul class="header-banner__menu">
+                            <li class="header-banner-menu__item title--active">
+                                <a class="header-link-hover" href="#">Home</a>
+                            </li>
+                            <li class="header-banner-menu__item">
+                                <a class="header-link-hover" href="#">About us</a>
+                                <ul class="header-banner-menu__choose">
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Our Organistaion</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Our Vision & Mission</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Leadership</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Organistaional Structure</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Volunteering</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-banner-menu__item">
+                                <a href="#" class="header-link-hover">Services</a>
+                                <ul class="header-banner-menu__choose">
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Residential Aged Care</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Yagoona Elderly Hostel</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Home Ageing</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Child Care</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Disability</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Vocation & Training</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Settlement & Health</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Other Services</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-banner-menu__item">
+                                <a class="header-link-hover" href="#">Events</a>
+                                <ul class="header-banner-menu__choose">
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Stardard
+                                            List</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Gallery
+                                            List</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Split
+                                            List</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Tour
+                                            Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-banner-menu__item">
+                                <a class="header-link-hover" href="#">Publications</a>
+                                <ul class="header-banner-menu__choose">
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Blog
+                                            Masonry</a></li>
+                                    <li class="header-banner-menu-choose__item">
+                                        <a href="#" class="header-link-hover">Blog Standard</a>
+                                        <i class="fas fa-angle-right"></i>
+                                        <ul class="header-banner-menu-choose-item__choose">
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Right Sidebar</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Left Sidebar</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Without Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="header-banner-menu-choose__item">
+                                        <a href="#" class="header-link-hover">Post Types</a>
+                                        <i class="fas fa-angle-right"></i>
+                                        <ul class="header-banner-menu-choose-item__choose">
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Standard</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Gallery</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Link</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Quote</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">Audio</a></li>
+                                            <li class="header-banner-menu-choose-item-choose__item"><a href="#"
+                                                    class="header-link-hover">No Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header-banner-menu__item">
+                                <a class="header-link-hover" href="#">Languages</a>
+                                <ul class="header-banner-menu__choose">
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Products
+                                            List</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Product
+                                            Single</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Shop
+                                            Pages</a></li>
+                                    <li class="header-banner-menu-choose__item"><a href="#" class="header-link-hover">Shop
+                                            List</a></li>
+                                </ul>
+                            </li>
+                            <li class="header-banner-menu__item-container">
+                                <a hre class="header-link-hover" f="#">Get Involved</a>
+                                <ul class="header-banner-menu__choose-container">
+                                    <div class="grid wide">
+                                        <div class="row">
+                                            <div class="col l-3 header-banner-menu-choose-container__item">
+                                                <div
+                                                    class="header-banner-menu-choose-container-item__item header-banner-menu-choose-container-item__item--title">
+                                                    <a href="#" class="header-link-hover">FEATURED</a>
+                                                </div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour Carousel</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tours Filter</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations With Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations List</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations Fullscreen Slider</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Fullscreen Section</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Reviews Carousel</a></div>
+                                            </div>
+                                            <div class="col l-3 header-banner-menu-choose-container__item">
+                                                <div
+                                                    class="header-banner-menu-choose-container-item__item header-banner-menu-choose-container-item__item--title">
+                                                    <a href="#" class="header-link-hover">PRESENTATION</a>
+                                                </div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour Carousel</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tours Filter</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations With Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations List</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations Fullscreen Slider</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Fullscreen Section</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Reviews Carousel</a></div>
+                                            </div>
+                                            <div class="col l-3 header-banner-menu-choose-container__item">
+                                                <div
+                                                    class="header-banner-menu-choose-container-item__item header-banner-menu-choose-container-item__item--title">
+                                                    <a href="#" class="header-link-hover">CLASSIC</a>
+                                                </div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour Carousel</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tours Filter</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations With Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations List</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations Fullscreen Slider</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Fullscreen Section</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Reviews Carousel</a></div>
+                                            </div>
+                                            <div class="col l-3 header-banner-menu-choose-container__item">
+                                                <div
+                                                    class="header-banner-menu-choose-container-item__item header-banner-menu-choose-container-item__item--title">
+                                                    <a href="#" class="header-link-hover">TYPOGRAPHY</a>
+                                                </div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tour Carousel</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Tours Filter</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations With Tour</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations List</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Destinations Fullscreen Slider</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Fullscreen Section</a></div>
+                                                <div class="header-banner-menu-choose-container-item__item"><a href="#"
+                                                        class="header-link-hover">Reviews Carousel</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <input type="checkbox" id="menu-tablet" hidden>
+            <div class="header__tablet hide-on-pc">
+                <div class="header__tablet-main grid wide">
+                    <div class="header-tablet__logo">
+                        <img src="./assets/images/logo-mobile-img.png" alt="logo-mobile-img">
+                    </div>
+                    <div class="header-tablet__menu">
+                        <label for="menu-tablet" class="header-tablet-menu__icon">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="header-tablet-menu__list-main hide-on-pc">
+                <ul class="header-tablet-menu__list wide">
+                    <div class="header-tablet-menu__item">
+                        <input type="checkbox" name="" id="menu-tablet-home" hidden>
+                        <label for="menu-tablet-home" class="header-tablet-menu__link title--active">Home</label>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                            <div class="header-tablet-menu-link__item">Travel Agency</div>
+                        </div>
+                    </div>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Page</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Destinations</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Tours</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Blog</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Shop</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                    <li class="header-tablet-menu__item">
+                        <div class="header-tablet-menu__link">Elements</div>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="header-tablet-menu-link__list">
+                            <div class="header-tablet-menu-link__item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <div class="app_container">
+            <div class="grid wide">
+                <div class="container__banner">
+                    <div class="container-banner__img">
+                        <img src="./assets/images/inner_circles.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="container__content">
+                    <div data-aos="fade-down"  class="container-content__description">
+                        <h2 class="container-content-description__header">ORGANIZATIONS SPECIALIZING IN COMMUNITY SERVICE</h2>
+                        <p class="container-content-description__text">Our CASS Group provides a wide range of social and welfare services to multicultural communities, covering a large geographical area including Metropolitan Sydney and Wollongong. We are often known and promoted in the community by the brand name “CASS”. A group of registered charities comprising the parent organization, China Australian Services Society Ltd (founded 1981) and its subsidiary, CASS Care Ltd (established 2002), also identified as a public charity (PBI) endorsed by the Australian Taxation Office.</p>
+                        <p class="container-content-description__text">CASS's contributions and achievements have been recognized in the community and also recognized by the NSW Parliament with the passage of a special movement to celebrate our services to the community. On several occasions, Federal and State Members of Parliament also congratulated us on our achievements in their respective Parliaments.</p>
+                    </div>
+                    <ul class="container-content__list">
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Our range of services and activities</h2>
+                            <p class="container-content-item__text">We serve people in the general community, especially those of East Asian descent, including China, Korea, Indonesia, Vietnam, etc. Every week, more than 3,300 families access services and activities Our following moves:</p>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Aged care services</h2>
+                            <p class="container-content-item__text">
+                                <ul>
+                                    <li>A Quality Aged Care Facility (RACF) for seniors in East Asia;</li>
+                                    <li>Home Care Package (HCP) ( Service Fee );</li>
+                                    <li>Short-term rehabilitative care (STRC);</li>
+                                    <li>Federal Home Support Program (CHSP) & Other Services;</li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Services for people with disabilities</h2>
+                            <p class="container-content-item__text">We are an NDIS approved service provider for the following services:</p>
+                            <ul>
+                                <li>Specialist accommodation for people with disabilities (Group housing);</li>
+                                <li>The day program at the Center is group-based;</li>
+                                <li>Personal support: personal care, household assistance, community involvement, shopping, transportation assistance, independent living skills training, etc.;</li>
+                                <li>Executive support staff;</li>
+                                <li>Plan management;</li>
+                                <li>Carer support group.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Child care services</h2>
+                            <ul>
+                                <li>We operate Childcare Centers in Campsie, Hurstville and St Leonards, providing long-term care for children from birth to 5 years old;</li>
+                                <li>Out of School Hours Care (OSHC): before/after school and vacation care for elementary students;</li>
+                                <li>Daycare at home: professional childcare and OSHC for children aged 0-12 in the homes of registered educators in different suburbs;</li>
+                                <li>Network of Playgroups for Children: Supporting non-English speaking mothers with children aged 0-5 supports the development of social networks, allowing them to access a variety of information and breaking down the divide. social isolation.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Training and Vocational Services</h2>
+                            <ul>
+                                <li>CASS Home Care Employment Service;</li>
+                                <li>Adult English classes, Chinese Certificate Courses and training for the unemployed and limited English to enable them to find work, with TAFE or other registered training institutions;</li>
+                                <li>Opportunities for students seeking internships with relevant qualifications.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Settlement & medical services</h2>
+                            <ul>
+                                <li>Settlement Service: assist newly arrived Chinese and Korean migrants with settlement issues including housing, employment, education as well as health & welfare issues through services direct referral and referral, WeChat, email (help@cass.org.au) and hotline inquiry service;</li>
+                                <li>Information sessions and contacts;</li>
+                                <li>Application filling and notarization services;</li>
+                                <li>Tax help services;</li>
+                                <li>Health services: provide health information or resources to the community and promote healthy lifestyles.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Volunteering opportunities</h2>
+                            <p class="container-content-item__text">We recruit and train volunteers to assist in many aspects of our operations. Especially:</p>
+                            <ul>
+                                <li>Community Visitor Program;</li>
+                                <li>Service of connecting phone calls;</li>
+                                <li>Facilitating Chinese and Korean-speaking volunteers to participate in volunteer services of mainstream organizations.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Promoting Chinese Language & Culture</h2>
+                            <ul>
+                                <li>CASS Chinese School: Chinese classes, STEM programs, debate, public speaking, etc.;</li>
+                                <li>CASS Academy of Arts: ballet, creative arts, jump rope, social dance, etc.;</li>
+                                <li>Cultural classes and groups: martial arts, lion dance, tai chi, Chinese calligraphy, Go etc.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Community activities</h2>
+                            <ul>
+                                <li>Running environmental care groups;</li>
+                                <li>Youth group: social and sports activities;</li>
+                                <li>Interest classes and groups: dancing, calligraphy, stamp collecting, etc.</li>
+                            </ul>
+                        </li>
+                        <li data-aos="fade-down" class="container-content__item">
+                            <h2 class="container-content-item__header">Community capacity building</h2>
+                            <p class="container-content-item__text">Advocate and advocate for boundaries on issues affecting the rights of culturally and linguistically diverse minorities to protect their interests;</p>
+                            <ul>
+                                <li>Organize fundraising activities for disaster relief, etc.;</li>
+                                <li>Promote community capacity building of less established communities and encourage people to get involved in community affairs.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app__footer">
+            <div class="gird wide">
+                <div class="footer__content">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12 footer-content__item">
+                            <img src="./assets/images/logo.png" alt="logo">
+                            <p>Lorem ipsum dolor sit ametco nsec te tuer adipiscing elitae</p>
+                            <div class="header-info__left footer-info">
+                                <div class="header-info-left__item">
+                                    <i class="far fa-envelope"></i>
+                                    <a href="mailto: example@gmail.com">example@gmail.com</a>
+                                </div>
+                                <div class="header-info-left__item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <a href="tel: 1 562 867 5309">0123 456 789</a>
+                                </div>
+                                <div class="header-info-left__item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <a href="https://goo.gl/maps/A4KjKiauJGWfB8mT8">Thanh Xuan, Ha Noi, Viet Nam</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12 footer-content__item">
+                            <h2 class="footer-content__title">Our Services</h2>
+                            <a href="#" class="footer-content__posts-place">
+                                <p class="footer-content-posts-place__place">Services for people with disabilities</p>
+                                <p class="footer-content-posts-place__time">September 7, 2016</p>
+                            </a>
+                            <a href="#" class="footer-content__posts-place">
+                                <p class="footer-content-posts-place__place">Aged care services</p>
+                                <p class="footer-content-posts-place__time">September 7, 2016</p>
+                            </a>
+                            <a href="#" class="footer-content__posts-place">
+                                <p class="footer-content-posts-place__place">Child care services</p>
+                                <p class="footer-content-posts-place__time">September 7, 2016</p>
+                            </a>
+                        </div>
+                        <div class="col l-3 m-6 c-12 footer-content__item">
+                            <h2 class="footer-content__title">Subscribe to our Newsletter</h2>
+                            <p>Etiam rhoncus. Maecenas temp us, tellus eget condimentum rho</p>
+                            <form class="footer-content__form" action="" method="POST">
+                                <div class="footer-content__group">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="" name="" placeholder="Name" required>
+                                </div>
+                                <div class="footer-content__group">
+                                    <i class="far fa-envelope"></i>
+                                    <input type="email" id="" name="" placeholder="Email" required>
+                                </div>
+                                <button class="footer-content__group footer-content__group--button">Subscribe</button>
+                            </form>
+                        </div>
+                        <div class="col l-3 m-6 c-12 footer-content__item">
+                            <h2 class="footer-content__title">Our Instagram</h2>
+                            <p>Aliquam lorem ante, dapibus inviver raqui feugiat a, tellus. Phasellus null</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p>Powered by</p>
+                    <a href="#" class="footer-copyright__info">ABC XYZ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a href="#" class="goto-top">TOP</a>
+
+    <script src="./assets/js/main.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: true,
+            duration: 500
+        });
+    </script>
+
+</body>
+
+</html>
